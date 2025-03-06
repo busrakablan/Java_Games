@@ -13,7 +13,7 @@ public class Rectangles extends BasicGame {
 
     @Override
     public void init(GameContainer gameContainer) throws SlickException {
-
+        int a =7;
     }
 
     @Override
