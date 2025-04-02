@@ -18,9 +18,6 @@ public class Objekts extends BasicGame {
 
     private boolean isGoingDown = false;
 
-    public void Rectangles(String title) {
-
-    }
 
     public Objekts(String title) {
         super(title);
