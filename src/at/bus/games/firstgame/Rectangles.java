@@ -20,8 +20,6 @@ private float speed;
 
     @Override
     public void update(GameContainer gameContainer, int delta) throws SlickException {
-
-
         this.x+=(float)delta/this.speed;
     }
 
