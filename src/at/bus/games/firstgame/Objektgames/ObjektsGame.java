@@ -54,7 +54,7 @@ public class ObjektsGame extends BasicGame {
 
     }
 
-    public static void main(String[] argv){
+    public static void main(String[] argv) {
         try {
             AppGameContainer container = new AppGameContainer(new at.bus.games.firstgame.Objektgames.ObjektsGame("Objektsgame"));
             container.setDisplayMode(800, 600, false);
