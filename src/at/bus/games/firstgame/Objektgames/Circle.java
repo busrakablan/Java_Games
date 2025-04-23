@@ -26,6 +26,7 @@ public class Circle implements Actor {
         if (this.y > 600) {
             this.y = 0;
         }
+        this.diameter += 1;
 
     }
 }

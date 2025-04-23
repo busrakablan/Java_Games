@@ -6,6 +6,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+
+
 public class ObjektsGame extends BasicGame {
     private List<Actor> actors;
     private Rectangle rectangle2;
@@ -43,7 +45,10 @@ public class ObjektsGame extends BasicGame {
 
         }
 
+
+
     }
+
 
     @Override
     public void render(GameContainer gameContainer, Graphics graphics) throws SlickException {
