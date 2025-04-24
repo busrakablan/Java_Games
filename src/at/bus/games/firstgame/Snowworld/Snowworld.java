@@ -1,9 +1,6 @@
 package at.bus.games.firstgame.Snowworld;
 
-import org.newdawn.slick.BasicGame;
-import org.newdawn.slick.GameContainer;
-import org.newdawn.slick.Graphics;
-import org.newdawn.slick.SlickException;
+import org.newdawn.slick.*;
 
 public class Snowworld extends BasicGame {
     public Snowworld(String title) {
@@ -24,4 +21,16 @@ public class Snowworld extends BasicGame {
     public void render(GameContainer gameContainer, Graphics graphics) throws SlickException {
 
     }
+
+
+    public static void main(String[] argv) {
+        try {
+            AppGameContainer container = new AppGameContainer(new at.bus.games.firstgame.Snowworld.Snowworld("Snowworld"));
+            container.setDisplayMode(800, 600, false);
+            container.start();
+        } catch (SlickException e) {
+            e.printStackTrace();
+        }
+    }
 }
+
