@@ -23,11 +23,13 @@ public class Circle implements Actor{
     }
 
     public void update(int delta) {
+
         this.y += (float) delta / this.speed;
+        this.diameter += 0.3;
+
         if (this.y > 600) {
             this.y = 0;
         }
-
     }
 }
 

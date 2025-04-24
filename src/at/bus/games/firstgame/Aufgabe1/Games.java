@@ -42,12 +42,14 @@ import java.util.Random;
 
         @Override
         public void update(GameContainer gameContainer, int delta) throws SlickException {
+
+
             for (at.bus.games.firstgame.Aufgabe1.Actor actor : this.actors) {
                 actor.update(delta);
 
             }
 
-            this.diameter = +0.3;
+
 
         }
 

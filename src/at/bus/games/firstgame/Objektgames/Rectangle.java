@@ -23,6 +23,5 @@ public class Rectangle implements Actor {
         if(this.x>600) {
             this.x = 0;
         }
-
     }
 }

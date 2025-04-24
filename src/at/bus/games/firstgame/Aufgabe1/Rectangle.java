@@ -7,14 +7,16 @@ public class Rectangle implements Actor {
     private float x;
     private float y;
     private float speed;
-    private boolean leftToRight;
+    private boolean isFlyingToTheRight = true;
+
+
 
 
     public Rectangle(int x, int y, float speed) {
         this.x = x;
         this.y = y;
         this.speed = speed;
-        this.leftToRight= leftToRight;
+        this.isFlyingToTheRight=isFlyingToTheRight;
     }
 
     public void render(Graphics graphics) {
@@ -22,19 +24,15 @@ public class Rectangle implements Actor {
     }
 
     public void update(int delta){
-        this.x += (float)delta/this.speed;
-        if(this.x>600) {
+        if (isFlyingToTheRight) {
+            this.x -= (float) delta / this.speed;
+        } else {
+            this.x += (float) delta / this.speed;
+        }
+
+        if (this.x > 600) {
             this.x = 0;
         }
-
-        if (leftToRight) {
-            x += delta / (float) speed;
-            if (x > 800) x = -10;
-        } else {
-            x -= delta / (float) speed;
-            if (x < -10) x = 800;
-        }
-
     }
 }
 
