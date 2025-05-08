@@ -21,6 +21,10 @@ public class ObjektsGame extends BasicGame {
     public void init(GameContainer gameContainer) throws SlickException {
         this.actors = new ArrayList<>();
         Random random = new Random();
+
+        Rockets rocket = new Rockets();
+        this.actors.add(rocket);
+
         for (int i = 0; i < 100; i++) {
             Rectangle rectangle = new Rectangle(random.nextInt(600), random.nextInt(600), random.nextInt(50));
             this.actors.add(rectangle);
@@ -36,7 +40,12 @@ public class ObjektsGame extends BasicGame {
             Ellipse ellipse = new Ellipse(random.nextInt(800), random.nextInt(600));
             this.actors.add(ellipse);
         }
+
+
+
+
     }
+
 
     @Override
     public void update(GameContainer gameContainer, int delta) throws SlickException {
