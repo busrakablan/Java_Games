@@ -6,6 +6,11 @@ public class Phone implements Product{
     private String Title;
     private String Description;
 
+    public Phone(int ID, String title) {
+        this.ID = ID;
+        Title = title;
+    }
+
     @Override
     public int getID() {
         return this.ID;

@@ -5,6 +5,12 @@ public class Shoe implements Product{
     private int Price;
     private String Title;
     private String Description;
+    private String color;
+
+    public Shoe(int ID, String color) {
+        this.ID = ID;
+        this.color = color;
+    }
 
     @Override
     public int getID() {

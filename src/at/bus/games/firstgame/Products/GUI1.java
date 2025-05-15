@@ -15,14 +15,17 @@ public class GUI1 implements GUI{
             int selection = scanner.nextInt();
 
             if (selection == 1) {
-                for (Product product : this.products) ;
+                for (Product product : this.products) {
+                    System.out.println(product.getID());
+                }
+                System.out.println("1 pressed");
             }
-            System.out.println(products.getTitle());
+
         }
     }
 
     @Override
     public void addProduct(Product product) {
-
+        products.add(product);
     }
 }
