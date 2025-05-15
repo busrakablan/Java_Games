@@ -68,6 +68,12 @@ public class ObjektsGame extends BasicGame {
 
     }
 
+    @Override
+    public void keyPressed(int key, char c) {
+        System.out.println(key);
+
+    }
+
     public static void main(String[] argv) {
         try {
             AppGameContainer container = new AppGameContainer(new at.bus.games.firstgame.Objektgames.ObjektsGame("Objektsgame"));
