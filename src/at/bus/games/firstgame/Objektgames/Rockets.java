@@ -8,7 +8,7 @@ public class Rockets implements Actor {
 
     public Rockets() throws SlickException {
         Image tmp = new Image("testdata/rocket.jpg");
-        this.rocketImage = tmp.getScaledCopy(50,50);
+        this.rocketImage = tmp.getScaledCopy(100,100);
         this.x = 100;
         this.y = 100;
 
@@ -19,10 +19,8 @@ public class Rockets implements Actor {
        rocketImage.draw(this.x,this.y);
     }
 
-    @Override
-    public void update(int delta) {
 
-    }
+
 
     @Override
     public void update(GameContainer gameContainer, int delta) {
@@ -33,7 +31,22 @@ public class Rockets implements Actor {
         if (gameContainer.getInput().isKeyDown(Input.KEY_LEFT)) {
             this.x--;
         }
+        if (gameContainer.getInput().isKeyDown(Input.KEY_UP)) {
+            this.y--;
+        }
+
+        if (gameContainer.getInput().isKeyDown(Input.KEY_DOWN)) {
+            this.y++;
+        }
+
+    }
+
+    public float getX() {
+        return x + 50;
+    }
+
+    public float getY() {
+        return y-10;
     }
 }
 
-//4:37

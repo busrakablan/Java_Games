@@ -10,6 +10,7 @@ import java.util.Random;
 
 public class ObjektsGame extends BasicGame {
     private List<Actor> actors;
+    private Rockets rockets;
     private Rectangle rectangle2;
 
 
@@ -23,6 +24,7 @@ public class ObjektsGame extends BasicGame {
         Random random = new Random();
 
         Rockets rocket = new Rockets();
+        this.rockets = rockets;
         this.actors.add(rocket);
 
         for (int i = 0; i < 100; i++) {
@@ -50,7 +52,7 @@ public class ObjektsGame extends BasicGame {
     @Override
     public void update(GameContainer gameContainer, int delta) throws SlickException {
         for (Actor actor : this.actors) {
-            actor.update(delta);
+            actor.update(gameContainer,delta);
 
         }
 
@@ -71,6 +73,10 @@ public class ObjektsGame extends BasicGame {
     @Override
     public void keyPressed(int key, char c) {
         System.out.println(key);
+        if (key ==Input.KEY_SPACE){
+            Canonball cb = new Canonball(this.rockets.getX(), this.rockets.getY());
+            this.actors.add(cb);
+        }
 
     }
 
